@@ -1,2 +1,27 @@
 <h1>Welcome to Users Module</h1>
-<a href="/users/index/login">Login</a> | <a href="/users/index/register">New User Registration</a>
+<a href="/users/login">Login</a> | <a href="/users/register">New User Registration</a>
+
+<?php
+
+$this->inlineScript()->captureStart();
+echo <<<JS2
+$(function(){
+        console.log('this is inline code 2';
+});
+JS2;
+$this->inlineScript()->captureEnd();
+
+?>
+
+
+<?php
+
+$this->inlineScript()->captureStart();
+echo <<<JS
+$(function(){
+	console.log('this is inline code';
+});
+JS;
+$this->inlineScript()->captureEnd();
+
+?>
